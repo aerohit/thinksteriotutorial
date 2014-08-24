@@ -1,3 +1,5 @@
+/* global app:true */
+
 'use strict';
 /**
  * @ngdoc overview
