@@ -15,8 +15,11 @@ var app = angular.module('angnewsApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase'
 ]);
+
+app.constant('FIREBASE_URL', 'https://popping-inferno-944.firebaseio.com/');
 
 app.config(function ($routeProvider) {
     $routeProvider
