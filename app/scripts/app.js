@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * @ngdoc overview
  * @name angnewsApp
@@ -8,20 +7,20 @@
  *
  * Main module of the application.
  */
-angular
-  .module('angnewsApp', [
+var app = angular.module('angnewsApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+]);
+
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/posts.html',
+        controller: 'PostsCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -30,4 +29,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+});
